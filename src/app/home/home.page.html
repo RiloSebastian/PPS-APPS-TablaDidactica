@@ -1,35 +1,8 @@
-<ion-menu side="start" contentId="main">
-    <ng-container *ngIf='usuario !== null'>
-        <ion-header>
-            <ion-toolbar color='elemento'>
-                <ion-title>Usuario</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content color='fondo'>
-            <ion-list style='--ion-background-color: transparent: !important'>
-                <ion-item style='--background: transparent: !important'>
-                    <ion-icon name="mail" slot='start'></ion-icon>
-                    <ion-label> {{usuario.email}} </ion-label>
-                </ion-item>
-            </ion-list>
-        </ion-content>
-        <ion-footer>
-            <ion-toolbar color='fondo'>
-                <ion-button color='danger' expand='block' (click)='cerrarSesion()'>Cerrar Sesión</ion-button>
-            </ion-toolbar>
-        </ion-footer>
-    </ng-container>
-</ion-menu>
 <div *ngIf='usuario !== null' class='ion-page' id="main">
     <ion-header class="header-home">
         <ion-toolbar color='elemento'>
-            <ion-buttons slot="start">
-                <ion-menu-button>
-                    <ion-icon name='person-circle-outline'></ion-icon>
-                </ion-menu-button>
-            </ion-buttons>
             <ion-title>
-                Memoria Dinámica
+                <ion-label> {{usuario.email}} </ion-label>
             </ion-title>
         </ion-toolbar>
     </ion-header>
@@ -106,3 +79,9 @@
             </div>
         </div>
     </ion-content>
+    <ion-footer>
+        <ion-toolbar color='fondo'>
+            <ion-button color='danger' expand='block' (click)='cerrarSesion()'>Cerrar Sesión</ion-button>
+        </ion-toolbar>
+    </ion-footer>
+</div>
